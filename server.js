@@ -1,17 +1,10 @@
+const express = require('express')
 
-const getPage = require('./routes/getPage');
-const postPage = require('./routes/postPage');
+const pageRouter = require('./routes/getPage')
 
-const data = require('./samples/insertPageWithParent')
-cosnt param =require('./samples/getPage')
+const app = express()
+app.use('/page',pageRouter)
 
-async function main(){
-    console.log(data)
-    await postPage(data)
-    
-    const page = await getPage(param)
-    console.log(page)
-    
-}
-
-main()
+app.listen(3000,()=>{
+    console.log("Server Running")
+})
