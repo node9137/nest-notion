@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "nest-notion",
   "version": "1.0.0",
   "description": "원티드 인턴십 nest팀의 notion 팀 과제입니다.",
@@ -18,6 +19,13 @@
   },
   "homepage": "https://github.com/node9137/nest-notion#readme",
   "dependencies": {
-    "mysql2": "^3.6.0"
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.0",
+    "path": "^0.12.7"
   }
 }
