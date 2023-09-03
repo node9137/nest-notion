@@ -106,6 +106,8 @@ module.exports = function(string) {
 - 에러 처리를 할 경우를 대비하여 함수 결과값을 *성공*  `{ code:0 }` 과 *실패* `{ code:1 }` 로 나누어서 처리했습니다.
 
 ## 4. 실행 영상(링크)
-https://github.com/node9137/nest-notion/assets/139099596/91182197-b0fb-4da5-bd57-1fdf45154b0a
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j1EtEB3Tmfs?si=6umsGPHWZ0Ok_RuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 </br>
 <hr/>
