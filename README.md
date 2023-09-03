@@ -14,7 +14,7 @@
 </br>
 
 과제 규격 링크 : https://lordmyshepherd.notion.site/Breadcrumbs-e970b412231049cca1593370ad8e8605</br>
-제출 링크(노션) : https://lordmyshepherd.notion.site/Breadcrumbs-e970b412231049cca1593370ad8e8605
+제출 링크(노션) : https://waiting-partridge-533.notion.site/nest-notion-Breadcrumbs-a5eab000c9a54450b46332bbf99a1ab1?pvs=4</br>
 </br>
 
 - 주의 사항! 프젝트 clone 전에 도커 설치 및 환경설정이 되어있어야합니다!(꼭!) 
