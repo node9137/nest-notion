@@ -1,6 +1,7 @@
 // get the client
 const mysql = require('mysql2/promise');
 const createPage = require('./createPage');
+const selectPage = require('./selectPage');
 
 const connection = {
     host: '127.0.0.1',
@@ -21,6 +22,8 @@ async function main(){
         "subpages" : "123"
     } 
     await createPage(pool,query)
+    const result = await selectPage(pool,1);
+    console.log(result)
 }
 
 main()
