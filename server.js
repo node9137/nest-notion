@@ -1,27 +1,41 @@
 // get the client
 const mysql = require('mysql2/promise');
 
-async function main() {
-    const connection = await mysql.createConnection({
-        host: 'host.docker.internal:3306',
-        user: 'test',
-        password: '1234',
-        database: 'nest-notion'
-    });
+const connection = {
+    host: '127.0.0.1',
+//  host: 'host.docker.internal',
+    port: '3306',
+    user: 'root',
+    password: '1234',
+    database: 'nest-notion',
+    connectionLimit: 30
+}
 
-    const result = await connection.execute(
-        `CREATE TABLE pages (
-    page_id INT AUTO_INCREMENT,
-    title VARCHAR(255),
-    content VARCHAR(255),
-    sub_pages VARCHAR,
-    PRIMARY KEY (page_id)
-    )`, function (err, results, fields) {
-            console.log(results);
-            console.log(fields);
-        });
+let pool = mysql.createPool(connection);
 
-    await console.log(connection)
+let query = {
+    "title" : "123",
+    "content" : "123",
+    "subpages" : "123"
+}
+
+const createPage = (query) => {
+    return new Promise(function(resolve, reject) {
+        pool.query(`INSERT INTO page SET ?`, query)
+        .then(result =>{
+            resolve({"code" : 0, "data" : result[0] })
+        })
+        .catch(err => {
+            console.log(err);
+            reject({"code" : 1, "data" : err })
+        })                      
+    });     
 };
 
-main();
+createPage(query)
+.then(result =>{
+    console.log(result)
+})
+.catch(err => {
+    console.log(err)
+})
