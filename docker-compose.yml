@@ -11,3 +11,18 @@ services:
       MYSQL_DATABASE: nest-notion
       MYSQL_USER: test
       MYSQL_PASSWORD: 1234
+
+#
+#  app:
+#    image: node
+#    depends_on:
+#      - db
+#    volumes:
+#      - ./:/usr/src/app/
+#    restart: always
+#    environment:
+#      MYSQL_OPTIONS_HOST: db
+#      MYSQL_DATABASE: nest-notion
+#      MYSQL_USERNAME: test
+#      MYSQL_PASSWORD: 1234
+#      MYSQL_OPTIONS_DIALECT: 'mysql'

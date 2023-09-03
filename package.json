@@ -1,0 +1,23 @@
+{
+  "name": "nest-notion",
+  "version": "1.0.0",
+  "description": "원티드 인턴십 nest팀의 notion 팀 과제입니다.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node9137/nest-notion.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node9137/nest-notion/issues"
+  },
+  "homepage": "https://github.com/node9137/nest-notion#readme",
+  "dependencies": {
+    "mysql2": "^3.6.0"
+  }
+}
