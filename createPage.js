@@ -1,3 +1,4 @@
+
 module.exports = (pool,query) => {
     return new Promise(function(resolve, reject) {
         pool.query(`INSERT INTO page SET ?`, query)
