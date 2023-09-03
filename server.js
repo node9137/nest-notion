@@ -1,5 +1,6 @@
 // get the client
 const mysql = require('mysql2/promise');
+const createPage = require('./createPage');
 
 const connection = {
     host: '127.0.0.1',
@@ -13,29 +14,13 @@ const connection = {
 
 let pool = mysql.createPool(connection);
 
-let query = {
-    "title" : "123",
-    "content" : "123",
-    "subpages" : "123"
+async function main(){
+    let query = {
+        "title" : "123",
+        "content" : "123",
+        "subpages" : "123"
+    } 
+    await createPage(pool,query)
 }
 
-const createPage = (query) => {
-    return new Promise(function(resolve, reject) {
-        pool.query(`INSERT INTO page SET ?`, query)
-        .then(result =>{
-            resolve({"code" : 0, "data" : result[0] })
-        })
-        .catch(err => {
-            console.log(err);
-            reject({"code" : 1, "data" : err })
-        })                      
-    });     
-};
-
-createPage(query)
-.then(result =>{
-    console.log(result)
-})
-.catch(err => {
-    console.log(err)
-})
+main()
