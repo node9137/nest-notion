@@ -107,7 +107,6 @@ module.exports = function(string) {
 
 ## 4. 실행 영상(링크)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j1EtEB3Tmfs?si=6umsGPHWZ0Ok_RuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+https://youtu.be/j1EtEB3Tmfs
 </br>
 <hr/>
