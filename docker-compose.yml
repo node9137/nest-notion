@@ -1,13 +1,28 @@
 version: "3.0"
 
 services:
-  db:
-    image: mysql:latest
-    volumes:
-      - ./db_data:/var/lib/mysql
-    restart: always
+# mysql DB
+  mysql:
+    image: mysql
+    container_name: nest-notion-db
+    ports:
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: "1234"
       MYSQL_DATABASE: nest-notion
-      MYSQL_USER: test
-      MYSQL_PASSWORD: 1234
+    volumes:
+      - ./mysql-init-files/:/docker-entrypoint-initdb.d
+#
+#  app:
+#    image: node
+#    depends_on:
+#      - db
+#    volumes:
+#      - ./:/usr/src/app/
+#    restart: always
+#    environment:
+#      MYSQL_OPTIONS_HOST: db
+#      MYSQL_DATABASE: nest-notion
+#      MYSQL_USERNAME: test
+#      MYSQL_PASSWORD: 1234
+#      MYSQL_OPTIONS_DIALECT: 'mysql'
